@@ -34,17 +34,17 @@
     <form>
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" name="name" />
       </div>
 
       <div>
         <label for="email">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" name="email" />
       </div>
 
       <div>
         <label for="phone">Phone Number</label>
-        <input type="text" id="phone" />
+        <input type="text" id="phone" name="phone" />
       </div>
 
       <div>
@@ -62,8 +62,10 @@
       </div>
 
       <div>
-        <button>Submit</button>
+        <button onclick="getData()" type="button">Submit</button>
       </div>
     </form>
+
+    <script src="assets/js/contact.js"></script>
   </body>
 </html>
