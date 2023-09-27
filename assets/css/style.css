@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  width: 60%;
+}
+
+header {
+  width: 100%;
+  line-height: 68px;
+  background: #fe4e30;
+  color: white;
+}
+
+.nav {
+  padding: 0 20em;
+  height: 68px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav div {
+  display: flex;
+  gap: 3em;
+}
+
+.nav ul {
+  display: flex;
+  gap: 3em;
+}
+
+.nav ul li {
+  cursor: pointer;
+}
+
+.nav ul li:first-child {
+  font-weight: bold;
+}
+
+.nav img {
+  width: 49px;
+  height: 33px;
+  margin-top: 17px;
+  cursor: pointer;
+}
+
+.header-button {
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 32px;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  padding: 2em 20em;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div i:hover {
+  color: rgb(0, 51, 255);
+}
+
+.title {
+  margin-bottom: 0.5em;
+}
+
+.description {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  background-color: #0e0e0e;
+  color: #eaeaea;
+  border-radius: 1em;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.link a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #0e0e0e;
+}
+
+.link i {
+  margin-left: 0.3em;
+}
+
+.social-media {
+  margin: 1em auto;
+  display: flex;
+  gap: 1em;
+  font-size: 2rem;
+}
+
+.social-media i {
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 0.8em;
+  background-color: #fff;
+}
