@@ -55,7 +55,9 @@ function renderBlog() {
   document.getElementById("contents").innerHTML = ""
 
   for (let i = 0; i < data.length; i++) {
-    document.getElementById("contents").innerHTML += `<div class="card">
+    document.getElementById(
+      "contents"
+    ).innerHTML += `<div class="card" onclick="redirectToBlogDetail()">
     <img
       src="${data[i].image}"
       alt="dummy"
