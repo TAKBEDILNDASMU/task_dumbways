@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="nav-content">
+        <div class="nav-left">
+          <ul>
+            <img class="nav-logo" src="./assets/images/brandwhite.png" alt="logo" />
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <a href="./contact.html">Contact Me</a>
+        </div>
+
+        <div class="nav-hamburger" onclick="openhumberger()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="nav-mobile" id="humberger-nav-container">
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="active">
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="submitData(event)">
+            <h1>Add My Project</h1>
+
+            <div class="input-name">
+              <label for="input-blog-project">Project Name</label>
+              <input id="input-blog-project" required />
+            </div>
+            <div class="input-date">
+              <div>
+                <label for="input-blog-start-date">Start Date</label>
+                <input id="input-blog-start-date" type="date" required />
+              </div>
+              <div>
+                <label for="input-blog-end-date">End Date</label>
+                <input id="input-blog-end-date" type="date" required />
+              </div>
+            </div>
+
+            <div class="input-description">
+              <label for="input-blog-description">Description</label>
+              <textarea
+                name="Description"
+                id="description"
+                cols="30"
+                rows="10"></textarea>
+            </div>
+
+            <div class="input-tech">
+              <label for="input-blog-tech">Technologies</label>
+              <div class="input-tech-container">
+                <div>
+                  <input
+                    class="tech-checkbox"
+                    type="checkbox"
+                    id="contactChoice1"
+                    name="tech"
+                    value="node|#3c873a" />
+                  <label for="contactChoice1">Node Js</label>
+                </div>
+                <div>
+                  <input
+                    class="tech-checkbox"
+                    type="checkbox"
+                    id="contactChoice2"
+                    name="tech"
+                    value="react|#61dbfb" />
+                  <label for="contactChoice2">React Js</label>
+                </div>
+                <div>
+                  <input
+                    class="tech-checkbox"
+                    type="checkbox"
+                    id="contactChoice3"
+                    name="tech"
+                    value="laravel|#f55247" />
+                  <label for="contactChoice3">Laravel</label>
+                </div>
+                <div>
+                  <input
+                    class="tech-checkbox"
+                    type="checkbox"
+                    id="contactChoice4"
+                    name="tech"
+                    value="golang|#00add8" />
+                  <label for="contactChoice4">Golang</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-upload">
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Choose</p>
+                  <i class="fa-solid fa-paperclip"></i>
+                </label>
+                <input type="file" id="input-blog-image" hidden required />
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button>Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="blog-list">
+        <h1>MY PROJECT</h1>
+        <div class="card-container" id="contents">
+          <!-- dynamic content would be here -->
+          <div class="card" id="card" onclick="redirectToBlogDetail()">
+            <img
+              src="https://dummyimage.com/600x400/fe4e30/fff"
+              alt="dummy"
+              class="card-image" />
+            <h3 class="card-title">React Weather App</h3>
+            <small>Duration: 3 Months</small>
+            <p class="card-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, eligendi
+              aut! Facilis illo cum recusandae ipsa laborum delectus molestias
+              exercitationem!
+            </p>
+            <div class="card-tech">
+              <i class="fa-brands fa-golang" style="color: #00add8"></i>
+              <i class="fa-brands fa-node" style="color: #3c873a"></i>
+              <i class="fa-brands fa-laravel" style="color: #f55247"></i>
+              <i class="fa-brands fa-react" style="color: #61dbfb"></i>
+            </div>
+            <div class="card-btn">
+              <button>Edit</button>
+              <button>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/button.js"></script>
+  </body>
+</html>
