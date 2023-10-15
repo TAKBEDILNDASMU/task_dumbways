@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Aatrox",
+    "image": "/images/Aatrox.jpg",
+    "rating": 4,
+    "comment": "I'm not your enemy, I'm the enemy"
+  },
+  {
+    "name": "Alistar",
+    "image": "/images/Alistar.jpg",
+    "rating": 1,
+    "comment": "Nothing can hold me back"
+  },
+  {
+    "name": "Amumu",
+    "image": "/images/Amumu.jpg",
+    "rating": 3,
+    "comment": "I thought you'd never pick me"
+  },
+  {
+    "name": "Darius",
+    "image": "/images/Darius.jpg",
+    "rating": 4,
+    "comment": "They'll regret opposing me"
+  },
+  {
+    "name": "Garen",
+    "image": "/images/Garen.jpg",
+    "rating": 4,
+    "comment": "My heart and sword always for Demacia."
+  }
+]

@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+}
+
+.nav-left img {
+  margin-right: 50px;
+}
+
+.nav-left ul li {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-left a:hover {
+  color: orangered;
+}
+
+.nav-right a {
+  background-color: orangered;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+/* form {
+  width: 350px;
+  margin: 50px auto;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+form div {
+  margin-top: 10px;
+}
+
+form label {
+  font-weight: bold;
+} */
+
+/* button {
+  background-color: orangered;
+  padding: 8px 20px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 10px;
+} */
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.left {
+  flex: 30%;
+}
+
+.card-container {
+  border: 1px solid #ebeaea;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #cecece;
+}
+
+.right {
+  flex: 70%;
+  margin-left: 50px;
+}
+
+.skill {
+  display: flex;
+  margin-top: 30px;
+}
+
+.social-media i {
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+#barsmenu {
+  display: none;
+}
+
+.humberger-nav-container {
+  display: none;
+}
+
+.humberger-nav-container a {
+  text-decoration: none;
+  background-color: #3d3d3d;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+}
+
+.humberger-nav-container .humberger-active {
+  background-color: orangered;
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card-container {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .item-collapse {
+    display: none;
+  }
+
+  #barsmenu {
+    display: block;
+  }
+
+  .humberger-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+  }
+}
