@@ -4,12 +4,12 @@
 
   <form action="/blog/create" method="post" class="w-75 mx-auto">
     <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
+      <label for="title" class="form-label fw-bold">Title</label>
       <input type="text" class="form-control" id="title" name="title" />
     </div>
 
     <div class="mb-3">
-      <label for="content" class="form-label">Content</label>
+      <label for="content" class="form-label fw-bold">Content</label>
       <textarea
         class="form-control"
         id="content"
@@ -19,7 +19,73 @@
     </div>
 
     <div class="mb-3">
-      <label for="uploadImage" class="form-label">Upload Image</label>
+      <p for="" class="form-label fw-bold">Technologies</p>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="golang|#00add8"
+              id="golang"
+              name="technologies"
+            />
+            <label class="form-check-label" for="golang">
+              Golang
+            </label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="react|#61dbfb"
+              id="react"
+              name="technologies"
+            />
+            <label class="form-check-label" for="react">
+              React
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="node|#3c873a"
+              id="node"
+              name="technologies"
+            />
+            <label class="form-check-label" for="node">
+              Node Js
+            </label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="laravel|#f55247"
+              id="laravel"
+              name="technologies"
+            />
+            <label class="form-check-label" for="laravel">
+              Laravel
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="uploadImage" class="form-label fw-bold">Upload Image</label>
       <input type="file" class="form-control" id="uploadImage" name="image" />
     </div>
 
@@ -28,8 +94,3 @@
     </div>
   </form>
 </div>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"
-></script>

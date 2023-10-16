@@ -2,9 +2,16 @@ const express = require("express")
 const path = require("path")
 const app = express()
 const cors = require("cors")
+const exphbs = require("express-handlebars")
 const PORT = 5000
 
-const routes = require("./src/routes/App.routes")
+// all routes
+const homeRoute = require("./src/routes/Home.routes")
+const BlogRoute = require("./src/routes/Blog.routes")
+const TestimonialRoute = require("./src/routes/Testimonial.routes")
+const ContactRoute = require("./src/routes/Contact.routes")
+const ApiRoute = require("./src/routes/Api.routes")
+
 const { engine } = require("express-handlebars")
 
 // cors for consume api
@@ -24,7 +31,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static("./src/public"))
 
 // app router
-app.use("/", routes)
+app.use("/", homeRoute)
+app.use("/blog", BlogRoute)
+app.use("/testimonial", TestimonialRoute)
+app.use("/contact", ContactRoute)
+app.use("/api", ApiRoute)
 
 app.listen(PORT, () => {
   console.log(`Server up and running on port ${PORT}`)

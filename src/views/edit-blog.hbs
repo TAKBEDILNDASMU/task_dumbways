@@ -25,6 +25,28 @@
     </div>
 
     <div class="mb-3">
+      <p for="" class="form-label fw-bold">Technologies</p>
+      <div class="row">
+        {{#each techData}}
+          <div class="col">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="{{this.technology}}|{{this.color}}"
+                id="{{this.technology}}"
+                name="technologies"
+              />
+              <label class="form-check-label" for="{{this.technology}}">
+                {{this.technology}}
+              </label>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="mb-3">
       <label for="uploadImage" class="form-label">Upload Image</label>
       <input type="file" class="form-control" id="uploadImage" name="image" />
     </div>

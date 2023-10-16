@@ -4,6 +4,10 @@
     "title": "Hari ini hari terakhir saya belajar di minggu ke tiga",
     "author": "Rebbecca Eltra",
     "postedAt": "13 Oct 2024",
+    "technologies": [
+      { "technology": "react", "color": "#61dbfb" },
+      { "technology": "laravel", "color": "#f55247" }
+    ],
     "content": "Ketimpangan sumber daya manusia (SDM) di sektor digital masih menjadi isu yang belum terpecahkan. Berdasarkan penelitian ManpowerGroup, ketimpangan SDM global, termasuk Indonesia, meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, molestiae numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta, eligendi debitis?"
   },
   {
@@ -11,6 +15,10 @@
     "title": "Bro bayar utang mu.. ",
     "author": "Jhon Doe",
     "postedAt": "12 Feb 2023",
+    "technologies": [
+      { "technology": "laravel", "color": "#f55247" },
+      { "technology": "node", "color": "#3c873a" }
+    ],
     "content": "Ketimpangan sumber daya manusia (SDM) di sektor digital masih menjadi isu yang belum terpecahkan. Berdasarkan penelitian ManpowerGroup, ketimpangan SDM global, termasuk Indonesia, meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, molestiae numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta, eligendi debitis?"
   },
   {
@@ -18,6 +26,10 @@
     "title": "Nabi adam turun ke bumi wilayah bandung ",
     "author": "Lordjen",
     "postedAt": "19 Aug 2025",
+    "technologies": [
+      { "technology": "golang", "color": "#00add8" },
+      { "technology": "node", "color": "#3c873a" }
+    ],
     "content": "Ketimpangan sumber daya manusia (SDM) di sektor digital masih menjadi isu yang belum terpecahkan. Berdasarkan penelitian ManpowerGroup, ketimpangan SDM global, termasuk Indonesia, meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, molestiae numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta, eligendi debitis?"
   }
 ]

@@ -18,7 +18,7 @@
             <a href="/blog/delete/{{this.id}}" class="btn btn-danger">Delete Blog</a>
           </div>
           <h1>
-            <a href="blog-detail.html" target="_blank">{{this.title}}</a>
+            <a href="/blog/{{this.id}}" target="_blank">{{this.title}}</a>
           </h1>
           <div class="detail-blog-content">
             {{this.postedAt}}
@@ -29,6 +29,14 @@
             {{this.content}}
           </p>
 
+          <div>
+            {{#each this.technologies}}
+              <i
+                class="fa-brands fa-{{this.technology}} fs-3 me-2"
+                style="color: {{this.color}};"
+              ></i>
+            {{/each}}
+          </div>
           <div style="float: right; margin: 10px">
             <p style="font-size: 15px; color: grey">1 minutes ago</p>
           </div>
@@ -39,4 +47,3 @@
   </div>
 
 </div>
-<script src="/assets/js/blog.js"></script>
