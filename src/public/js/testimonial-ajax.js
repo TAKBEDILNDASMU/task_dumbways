@@ -13,8 +13,11 @@ async function showTestimonial() {
     testimonialForHtml += `
         <div class="testimonial">
           <img src=${item.image} class="profile-testimonial" />
-          <p class="quote">${item.comment}</p>
+          <p class="quote mt-2">${item.comment}</p>
           <p class="author">- ${item.name}</p>
+          <div class="w-100 d-flex justify-content-end align-items-center">
+            ${item.rating}<i class="fa-solid fa-star ms-1"></i>
+          </div>
         </div>
       `
   })
@@ -39,8 +42,11 @@ async function filterTestimonials(rating) {
       testimonialForHtml += `
             <div class="testimonial">
               <img src=${item.image} class="profile-testimonial" />
-              <p class="quote">${item.comment}</p>
+              <p class="quote mt-2">${item.comment}</p>
               <p class="author">- ${item.name}</p>
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                ${item.rating}<i class="fa-solid fa-star ms-1"></i>
+              </div>
             </div>
           `
     })

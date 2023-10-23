@@ -1,20 +1,58 @@
 <!-- Form Blog -->
-<div class="container mb-5" style="margin-top: 100px">
+<div class="container mb-5 mt-5">
   <h2 class="text-center">Create Post Blog</h2>
 
-  <form action="/blog/create" method="post" class="w-75 mx-auto">
+  <form
+    action="/blog/create"
+    method="post"
+    class="w-75 mx-auto"
+    enctype="multipart/form-data"
+  >
     <div class="mb-3">
       <label for="title" class="form-label fw-bold">Title</label>
-      <input type="text" class="form-control" id="title" name="title" />
+      <input
+        type="text"
+        class="form-control shadow-sm"
+        id="title"
+        name="title"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <div class="row">
+        <div class="col">
+          <label for="startdate" class="form-label fw-bold">Start Date</label>
+          <input
+            type="date"
+            class="form-control shadow-sm"
+            id="startdate"
+            name="startDate"
+            required
+          />
+        </div>
+        <div class="col">
+          <label for="enddate" class="form-label fw-bold">End Date</label>
+          <input
+            type="date"
+            class="form-control shadow-sm"
+            id="enddate"
+            name="endDate"
+            required
+          />
+        </div>
+      </div>
+
     </div>
 
     <div class="mb-3">
       <label for="content" class="form-label fw-bold">Content</label>
       <textarea
-        class="form-control"
+        class="form-control shadow-sm"
         id="content"
         style="resize: none; height: 200px"
         name="content"
+        required
       ></textarea>
     </div>
 
@@ -27,7 +65,7 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="golang|#00add8"
+              value="golang"
               id="golang"
               name="technologies"
             />
@@ -41,7 +79,7 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="react|#61dbfb"
+              value="react"
               id="react"
               name="technologies"
             />
@@ -57,7 +95,7 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="node|#3c873a"
+              value="node"
               id="node"
               name="technologies"
             />
@@ -71,7 +109,7 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="laravel|#f55247"
+              value="laravel"
               id="laravel"
               name="technologies"
             />
@@ -86,7 +124,7 @@
 
     <div class="mb-3">
       <label for="uploadImage" class="form-label fw-bold">Upload Image</label>
-      <input type="file" class="form-control" id="uploadImage" name="image" />
+      <input type="file" class="form-control" id="uploadImage" name="upload-image" />
     </div>
 
     <div class="d-flex justify-content-end mt-5">

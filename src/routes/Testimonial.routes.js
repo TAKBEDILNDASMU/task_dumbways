@@ -5,6 +5,8 @@ router.get("/", (req, res) => {
   res.render("testimonial", {
     layout: "index",
     active: { Testimonial: true },
+    isLogin: req.session.isLogin,
+    user: req.session.user,
   })
 })
 

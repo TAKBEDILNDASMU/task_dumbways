@@ -15,24 +15,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    {{#if active.Blog}}
-    <link rel="stylesheet" href="/css/blog.css" />
-     {{/if}}
+    <link rel="stylesheet" href="/css/button.css">
     {{#if active.Testimonial}}
      <link rel="stylesheet" href="/css/testimonials.css" />
     {{else}}
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
     {{/if}}
    
     <title>Document</title>
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 bg-light {{#if active.Home}}bg-transparent{{/if}}">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 68px;">
+    <nav class="navbar navbar-expand-lg sticky-top" style="height: 68px; background-color: #fe4e30;">
       <div class="container">
         <a class="navbar-brand me-5" href="/">
-          <img src="/images/logo.png" alt="logo-brand" />
+          <img src="/images/brandwhite.png" alt="logo-brand" style="width: 49px; height: 33px;" />
         </a>
         <button
           class="navbar-toggler"
@@ -46,32 +45,70 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse relative" style="background-color: rgb(248,249,250); z-index: 999" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse relative text-center" style="background-color: #fe4e30; z-index: 999" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link {{#if active.Home}}text-danger fw-bold{{/if}}" href="/">Home</a>
+              <a class="nav-link text-light {{#if active.Home}}text-danger fw-bold{{/if}}" href="/">Home</a>
             </li>
+            {{#if isLogin}}
             <li class="nav-item">
-              <a class="nav-link {{#if active.Blog}}text-danger fw-bold{{/if}}" href="/blog">Blog</a>
+              <a class="nav-link text-light {{#if active.Blog}}text-danger fw-bold{{/if}}" href="/blog/create">Add Blog</a>
             </li>
+            {{/if}}
             <li class="nav-item">
-              <a class="nav-link {{#if active.Testimonial}}text-danger fw-bold{{/if}}" href="/testimonial">Testimonials</a>
+              <a class="nav-link text-light {{#if active.Testimonial}}text-danger fw-bold{{/if}}" href="/testimonial">Testimonials</a>
+            </li>
+            <li class="nav-item d-lg-none">
+               <a class="nav-link text-light {{#if active.Login}}text-danger fw-bold{{/if}}" href="/login">Login</a>
+            </li>
+            <li class="nav-item d-lg-none">
+               <a class="nav-link text-light {{#if active.Register}}text-danger fw-bold{{/if}}" href="/register">Register</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="btn-dumbways" href="/contact">Contact Me</a>
             </li>
           </ul>
-          <div class="d-flex">
-            <a class="btn btn-danger" href="/contact">Contact Me</a>
+          <div class="d-none d-lg-flex align-items-center" style="gap: 1em;">
+            {{#if isLogin}}
+            <p class="m-0 text-light fw-bold active fw-semibold" href="#">Hallo, {{user.name}}</p>
+            <form action="/logout" class="m-0" method="post">
+              <button class="nav-link text-light" type="submit">Logout</button>  
+            </form>
+            {{else}}
+            <a class="nav-link text-light {{#if active.Register}}text-danger fw-bold{{/if}}" href="/register">Register</a>
+            <a class="nav-link text-light {{#if active.Login}}text-danger fw-bold{{/if}}" href="/login">Login</a>
+            {{/if}}
+            <a class="btn-dumbways" href="/contact">Contact Me</a>
           </div>
         </div>
       </div>
     </nav>
+
+      {{#if info}}
+      <div class="alert alert-info alert-dismissible fade show mx-auto" style="position: absolute; z-index: 9999; top: 2em; transform: translate(-50%, -50%); left: 50%;">
+        {{info}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+      {{/if}}
+      {{#if success}}
+      <div class="alert alert-success alert-dismissible fade show mx-auto" style="position: absolute; z-index: 9999; top: 2em; transform: translate(-50%, -50%); left: 50%;">
+        {{success}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+      {{/if}}
+      {{#if danger}}
+      <div class="alert alert-danger alert-dismissible fade show mx-auto" style="position: absolute; z-index: 9999; top: 2em; transform: translate(-50%, -50%); left: 50%;">
+        {{danger}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+      {{/if}}
+    
     <!-- End Navbar -->
-
     {{{body}}}
-
+{{!-- 
     <footer class="text-center border-top border-danger pt-3 mt-auto">
       <p>Created by Titan Apriliyan</p>
-    </footer>
-
+    </footer> --}}
 
   <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

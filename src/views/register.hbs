@@ -1,0 +1,44 @@
+{{#if errors.length}}
+  <div class="position-relative d-flex flex-column">
+    {{#each errors}}
+      <div class="alert alert-danger alert-dismissible fade show mx-auto" style="">
+        {{this.message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+    {{/each}}
+  </div>
+{{/if}}
+
+<form action="/register" method="post" class="container mt-5" style="max-width: 990px;">
+  <h1 class="text-center">Register your account</h1>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control shadow-sm"
+      id="name"
+      name="name"
+      value="{{name}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control shadow-sm"
+      id="email"
+      name="email"
+      value="{{email}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control shadow-sm" id="password" name="password" />
+  </div>
+
+  <div class="w-100 d-flex justify-content-end">
+    <button type="submit" class="btn-contact text-right">Submit</button>
+  </div>
+</form>
+<script src="/js/contact.js"></script>
