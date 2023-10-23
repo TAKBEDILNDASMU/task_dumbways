@@ -1,6 +1,6 @@
 const { sequelize } = require("../../db")
 const { arraySplit } = require("../helpers/arraySplit")
-const { differenceInMonths } = require("date-fns")
+const { differenceInMonths, format, addHours, parseISO } = require("date-fns")
 const fs = require("fs")
 
 const getCreateBlog = (req, res) => {
@@ -18,6 +18,9 @@ const postCreateBlog = async (req, res) => {
 
   startDate = new Date(startDate)
   endDate = new Date(endDate)
+
+  const adjustedStartDate = format(addHours(startDate, 7), "yyyy-MM-dd HH:mm:ss.SSSXX")
+  const adjustedEndDate = format(addHours(endDate, 7), "yyyy-MM-dd HH:mm:ss.SSSXX")
 
   const duration = differenceInMonths(endDate, startDate)
 
@@ -38,9 +41,11 @@ const postCreateBlog = async (req, res) => {
     image, 
     author, 
     duration,
+    "startDate",
+    "endDate",
     "createdAt", 
     "updatedAt")
-VALUES ('${title}', ARRAY ['${technologies}'], '${content}', '${image}', '${author}', '${duration}' ,NOW(), NOW());`
+VALUES ('${title}', ARRAY ['${technologies}'], '${content}', '${image}', '${author}', '${duration}', '${adjustedStartDate}', '${adjustedEndDate}' ,NOW(), NOW());`
 
   await sequelize.query(query1)
   req.flash("success", "Project successfully added")
@@ -74,6 +79,10 @@ const getEditBlog = async (req, res) => {
     }
   })
 
+  results[0].startDate = format(results[0].startDate, "yyyy-MM-dd")
+  results[0].endDate = format(results[0].endDate, "yyyy-MM-dd")
+
+  console.log(results[0])
   res.render("edit-blog", {
     layout: "index",
     blog: results[0],

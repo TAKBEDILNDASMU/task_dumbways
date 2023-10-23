@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       duration: {
         type: DataTypes.INTEGER,
       },
+      startDate: {
+        type: DataTypes.DATE,
+      },
+      endDate: {
+        type: DataTypes.DATE,
+      },
     },
     {
       sequelize,
